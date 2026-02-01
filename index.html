@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT-Профессии 2025 | Будущее начинается сегодня</title>
+    <title>IT-Профессии 2026 | Будущее начинается сегодня</title>
     <style>
         * {
             margin: 0;
@@ -597,7 +597,7 @@
     <div class="bg-glow"></div>
 
     <nav>
-        <div class="logo">IT Future</div>
+        <div class="logo">IT-Профессии 2026</div>
         <ul class="nav-links">
             <li><a href="#professions">Профессии</a></li>
             <li><a href="#trends">Тренды</a></li>
@@ -608,7 +608,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="badge">🔥 Актуально в 2025</div>
+            <div class="badge">🔥 Актуально в 2026</div>
             <h1>IT-профессии — <span>путь в будущее</span></h1>
             <p>Исследуйте самые востребованные специальности в сфере технологий. Выберите свою дорогу в цифровом мире.</p>
             <div class="cta-buttons">
@@ -617,16 +617,16 @@
             </div>
             <div class="stats">
                 <div class="stat">
-                    <div class="stat-number" data-target="2.5">0</div>
-                    <div class="stat-label">млн вакансий</div>
+                    <div class="stat-number" data-target="3.2" data-suffix=" млн">0</div>
+                    <div class="stat-label">вакансий в IT</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number" data-target="85">0</div>
-                    <div class="stat-label">% роста за год</div>
+                    <div class="stat-number" data-target="94" data-suffix="%">0</div>
+                    <div class="stat-label">рост за год</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number" data-target="300">0</div>
-                    <div class="stat-label">тыс. ₽ средняя зп</div>
+                    <div class="stat-number" data-target="350" data-suffix=" тыс. ₽">0</div>
+                    <div class="stat-label">средняя зарплата</div>
                 </div>
             </div>
         </div>
@@ -752,7 +752,7 @@
     <section class="trends" id="trends">
         <div class="trends-content">
             <div class="fade-in">
-                <h2>Тренды 2025</h2>
+                <h2>Тренды 2026</h2>
                 <p style="color: var(--gray); margin: 1rem 0 2rem;">Какие технологии набирают популярность и где искать возможности</p>
                 <ul style="list-style: none; line-height: 2;">
                     <li>🚀 <strong>Искусственный интеллект</strong> — интеграция AI во все сферы</li>
@@ -766,7 +766,7 @@
                 <div class="chart-bar">
                     <div class="chart-label">
                         <span>ИИ и Machine Learning</span>
-                        <span>+127%</span>
+                        <span>+142%</span>
                     </div>
                     <div class="chart-progress">
                         <div class="chart-fill" style="width: 95%"></div>
@@ -775,7 +775,7 @@
                 <div class="chart-bar">
                     <div class="chart-label">
                         <span>Кибербезопасность</span>
-                        <span>+85%</span>
+                        <span>+94%</span>
                     </div>
                     <div class="chart-progress">
                         <div class="chart-fill" style="width: 80%"></div>
@@ -784,7 +784,7 @@
                 <div class="chart-bar">
                     <div class="chart-label">
                         <span>Cloud/DevOps</span>
-                        <span>+72%</span>
+                        <span>+78%</span>
                     </div>
                     <div class="chart-progress">
                         <div class="chart-fill" style="width: 70%"></div>
@@ -793,7 +793,7 @@
                 <div class="chart-bar">
                     <div class="chart-label">
                         <span>Мобильная разработка</span>
-                        <span>+45%</span>
+                        <span>+52%</span>
                     </div>
                     <div class="chart-progress">
                         <div class="chart-fill" style="width: 55%"></div>
@@ -802,7 +802,7 @@
                 <div class="chart-bar">
                     <div class="chart-label">
                         <span>Веб-разработка</span>
-                        <span>+38%</span>
+                        <span>+41%</span>
                     </div>
                     <div class="chart-progress">
                         <div class="chart-fill" style="width: 45%"></div>
@@ -858,7 +858,7 @@
 
     <section class="skills" id="skills">
         <div class="section-header fade-in">
-            <h2>Ключевые навыки 2025</h2>
+            <h2>Ключевые навыки 2026</h2>
             <p>Что нужно знать, чтобы быть востребованным специалистом</p>
         </div>
         
@@ -887,8 +887,8 @@
     </section>
 
     <footer>
-        <p>© 2025 IT Future — Школьный проект об актуальности IT-профессий</p>
-        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Создано с ❤️ для образовательных целей</p>
+        <p>© 2026 Меньщиков Артём Александрович, 9-4 класс</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Школьный проект об актуальности IT-профессий</p>
     </footer>
 
     <script>
@@ -899,14 +899,20 @@
         const animateCounters = () => {
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const count = parseFloat(counter.innerText) || 0;
                 const inc = target / speed;
 
                 if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
+                    const newVal = count + inc;
+                    if (target > 100) {
+                        counter.innerText = Math.ceil(newVal) + suffix;
+                    } else {
+                        counter.innerText = newVal.toFixed(1) + suffix;
+                    }
                     setTimeout(animateCounters, 20);
                 } else {
-                    counter.innerText = target + (target > 100 ? '' : target > 10 ? 'K' : 'M+');
+                    counter.innerText = target + suffix;
                 }
             });
         };
